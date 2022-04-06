@@ -5,6 +5,9 @@
  */
 package Classes.Shapes;
 
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Line;
+
 /**
  *
  * @author b7mac
@@ -18,5 +21,12 @@ public class Lin extends Shape{
     }
     public void SetEndY(int endy){
         this.endy=endy;
+    }
+    public Line getLine(){
+        Line temp=new Line(x,y,endx,endy);//startX, startY, endX, endY
+        temp.setStrokeWidth(border); //border width
+        temp.setStroke(Color.rgb(cr,cg,cb)); // color
+        
+        return temp;
     }
 }

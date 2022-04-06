@@ -5,6 +5,9 @@
  */
 package Classes.Shapes;
 
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+
 /**
  *
  * @author b7mac
@@ -33,5 +36,13 @@ public class Rect extends Shape{
     }
     public int GetLength(){
         return length;
+    }
+    public Rectangle getRectangle(){
+        Rectangle temp = new Rectangle(x,y,length,width);//x, y, length, width
+        temp.setFill(Color.rgb(cr,cg,cb)); //sets inside color
+        temp.setStrokeWidth(border); //border width
+        temp.setStroke(Color.rgb(br,bg,bb)); //border color
+        
+        return temp;
     }
 }

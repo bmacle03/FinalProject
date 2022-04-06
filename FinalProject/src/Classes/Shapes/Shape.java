@@ -17,7 +17,7 @@ public class Shape {
     public int cg=60; //rgb values for the shape itself
     public int cb=120;//all variables have default values associated
     public static int id=0;
-    public Shape(){this.id+=1;}
+    public Shape(){this.id++;}
     public void SetX(int x){
         this.x=x;
     }
