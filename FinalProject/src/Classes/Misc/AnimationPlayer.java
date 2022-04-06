@@ -57,9 +57,6 @@ public class AnimationPlayer {
         if(!list.get(2).equals("")){
             this.objects=Integer.parseInt(list.get(2));
         }
-        System.out.println(frames);
-        System.out.println(fps);
-        System.out.println(objects);
         
         
         
