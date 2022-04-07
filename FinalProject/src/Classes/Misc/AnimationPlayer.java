@@ -77,22 +77,22 @@ public class AnimationPlayer {
                         temp.SetY(Integer.parseInt(dump[1]));
                     }
                     else if(list.get(a).contains("color:")&&!list.get(a).contains("bordercolor:")){ //searches for color string,splits the string into 3 rgb values and sets values to object if found
-                        String[]dump = list.get(a).split(" ");
+                        String[]dump = list.get(a).split(":");
                         String[]dump2= dump[1].split(",");
-                        temp.SetCR(Integer.parseInt(dump2[0]));
-                        temp.SetCG(Integer.parseInt(dump2[1]));
-                        temp.SetCB(Integer.parseInt(dump2[2]));
+                        temp.SetCR(Integer.parseInt(dump2[0].trim()));
+                        temp.SetCG(Integer.parseInt(dump2[1].trim()));
+                        temp.SetCB(Integer.parseInt(dump2[2].trim()));
                     }
                     else if(list.get(a).contains("border:")){
                         String[]dump = list.get(a).split(" "); //searches for border thickness parameter and sets value to object if found
                         temp.SetBorder(Integer.parseInt(dump[1]));
                     }
                     else if(list.get(a).contains("bordercolor:")){
-                        String[]dump = list.get(a).split(" ");
+                        String[]dump = list.get(a).split(":");
                         String[]dump2= dump[1].split(",");
-                        temp.SetBR(Integer.parseInt(dump2[0])); //searches for bordercolor string,splits the string into 3 rgb values and sets values to object if found
-                        temp.SetBG(Integer.parseInt(dump2[1]));
-                        temp.SetBB(Integer.parseInt(dump2[2]));
+                        temp.SetBR(Integer.parseInt(dump2[0].trim())); //searches for bordercolor string,splits the string into 3 rgb values and sets values to object if found
+                        temp.SetBG(Integer.parseInt(dump2[1].trim()));
+                        temp.SetBB(Integer.parseInt(dump2[2].trim()));
                     }
                     else if(list.get(a).equals("\n")||list.get(a).equals("")||list.get(a).equals(" ")||list.get(a).equals("effect")){ //searches for when the object declaration is done and ends the loop.
                         root.getChildren().add(temp.getCircle()); //adds the completed shape to a group to be printed later
@@ -124,22 +124,22 @@ public class AnimationPlayer {
                         temp.SetY(Integer.parseInt(dump[1]));
                     }
                     else if(list.get(a).contains("color:")&&!list.get(a).contains("bordercolor:")){
-                        String[]dump = list.get(a).split(" ");
+                        String[]dump = list.get(a).split(":");
                         String[]dump2= dump[1].split(",");
-                        temp.SetCR(Integer.parseInt(dump2[0])); //searches for color string,splits the string into 3 rgb values and sets values to object if found
-                        temp.SetCG(Integer.parseInt(dump2[1]));
-                        temp.SetCB(Integer.parseInt(dump2[2]));
+                        temp.SetCR(Integer.parseInt(dump2[0].trim())); //searches for color string,splits the string into 3 rgb values and sets values to object if found
+                        temp.SetCG(Integer.parseInt(dump2[1].trim()));
+                        temp.SetCB(Integer.parseInt(dump2[2].trim()));
                     }
                     else if(list.get(a).contains("border:")){
                         String[]dump = list.get(a).split(" "); //searches for border thickness coordinate parameter and sets value to object if found
                         temp.SetBorder(Integer.parseInt(dump[1])); 
                     }
                     else if(list.get(a).contains("bordercolor:")){
-                        String[]dump = list.get(a).split(" ");
+                        String[]dump = list.get(a).split(":");
                         String[]dump2= dump[1].split(",");
-                        temp.SetBR(Integer.parseInt(dump2[0])); //searches for bordercolor string,splits the string into 3 rgb values and sets values to object if found
-                        temp.SetBG(Integer.parseInt(dump2[1]));
-                        temp.SetBB(Integer.parseInt(dump2[2]));
+                        temp.SetBR(Integer.parseInt(dump2[0].trim())); //searches for bordercolor string,splits the string into 3 rgb values and sets values to object if found
+                        temp.SetBG(Integer.parseInt(dump2[1].trim()));
+                        temp.SetBB(Integer.parseInt(dump2[2].trim()));
                     }
                     else if(list.get(a).equals("\n")||list.get(a).equals("")||list.get(a).equals(" ")||list.get(a).equals("effect")){ //searches for when the object declaration is done and ends the loop.
                         root.getChildren().add(temp.getRectangle()); //adds the completed shape to a group to be printed later
@@ -170,11 +170,11 @@ public class AnimationPlayer {
                         temp.SetEndY(Integer.parseInt(dump[1]));
                     }
                     else if(list.get(a).contains("color:")){
-                        String[]dump = list.get(a).split(" ");
+                        String[]dump = list.get(a).split(":");
                         String[]dump2= dump[1].split(",");
-                        temp.SetCR(Integer.parseInt(dump2[0]));
-                        temp.SetCG(Integer.parseInt(dump2[1])); //searches for color string,splits the string into 3 rgb values and sets values to object if found
-                        temp.SetCB(Integer.parseInt(dump2[2]));
+                        temp.SetCR(Integer.parseInt(dump2[0].trim()));
+                        temp.SetCG(Integer.parseInt(dump2[1].trim())); //searches for color string,splits the string into 3 rgb values and sets values to object if found
+                        temp.SetCB(Integer.parseInt(dump2[2].trim()));
                     }
                     else if(list.get(a).contains("border:")){
                         String[]dump = list.get(a).split(" "); //searches for border thickness coordinate parameter and sets value to object if found
