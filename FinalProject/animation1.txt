@@ -4,8 +4,8 @@ speed: 10fps
 
 Circle
 r: 10
-x: 50
-y: 50
+x: 200
+y: 200
 color: 255,0,0
 effect
 Show

@@ -67,7 +67,7 @@ public class AnimationPlayer {
                 Circ temp=new Circ();
                 
                 for(int a=i+1;a<list.size();a++){
-                    if(list.get(a).contains("r:")){
+                    if(list.get(a).contains("r:")&&!list.get(a).contains("color:")){
                         String[]dump = list.get(a).split(" ");
                         temp.SetR(Integer.parseInt(dump[1]));
                     }
@@ -98,9 +98,9 @@ public class AnimationPlayer {
                         temp.SetBG(Integer.parseInt(dump2[1]));
                         temp.SetBB(Integer.parseInt(dump2[2]));
                     }
-                    else if(list.get(a).equals("\n")||list.get(a).equals("")||list.get(a).equals(" ")){
+                    else if(list.get(a).equals("\n")||list.get(a).equals("")||list.get(a).equals(" ")||list.get(a).equals("effect")){
                         root.getChildren().add(temp.getCircle());
-                        i=a+1;
+                        i=a;
                         break;
                     }
                 }
@@ -145,9 +145,9 @@ public class AnimationPlayer {
                         temp.SetBG(Integer.parseInt(dump2[1]));
                         temp.SetBB(Integer.parseInt(dump2[2]));
                     }
-                    else if(list.get(a).equals("\n")||list.get(a).equals("")||list.get(a).equals(" ")){
+                    else if(list.get(a).equals("\n")||list.get(a).equals("")||list.get(a).equals(" ")||list.get(a).equals("effect")){
                         root.getChildren().add(temp.getRectangle());
-                        i=a+1;
+                        i=a;
                         break;
                     }
                 }
@@ -157,11 +157,11 @@ public class AnimationPlayer {
                 Lin temp=new Lin();
                 
                 for(int a=i+1;a<list.size();a++){
-                    if(list.get(a).contains("x:")){
+                    if(list.get(a).contains("x:")&&!list.get(a).contains("endx:")){
                         String[]dump = list.get(a).split(" ");
                         temp.SetX(Integer.parseInt(dump[1]));
                     }
-                    else if(list.get(a).contains("y:")){
+                    else if(list.get(a).contains("y:")&&!list.get(a).contains("endy:")){
                         String[]dump = list.get(a).split(" ");
                         temp.SetY(Integer.parseInt(dump[1]));
                     }
@@ -184,9 +184,9 @@ public class AnimationPlayer {
                         String[]dump = list.get(a).split(" ");
                         temp.SetBorder(Integer.parseInt(dump[1]));
                     }
-                    else if(list.get(a).equals("\n")||list.get(a).equals("")||list.get(a).equals(" ")){
+                    else if(list.get(a).equals("\n")||list.get(a).equals("")||list.get(a).equals(" ")||list.get(a).equals("effect")){
                         root.getChildren().add(temp.getLine());
-                        i=a+1;
+                        i=a;
                         break;
                     }
                 }
