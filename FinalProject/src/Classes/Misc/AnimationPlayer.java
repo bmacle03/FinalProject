@@ -16,7 +16,7 @@ import javafx.scene.shape.Rectangle;
 
 /**
  *
- * @author b7mac
+ * @author Benjamin MacLean
  */
 public class AnimationPlayer {
     Group root=new Group();
@@ -79,8 +79,7 @@ public class AnimationPlayer {
                         String[]dump = list.get(a).split(" ");
                         temp.SetY(Integer.parseInt(dump[1]));
                     }
-                    else if(list.get(a).contains("color:")){
-                        System.out.println(list.get(a));
+                    else if(list.get(a).contains("color:")&&!list.get(a).contains("bordercolor:")){
                         String[]dump = list.get(a).split(" ");
                         String[]dump2= dump[1].split(",");
                         temp.SetCR(Integer.parseInt(dump2[0]));
@@ -127,7 +126,7 @@ public class AnimationPlayer {
                         String[]dump = list.get(a).split(" ");
                         temp.SetY(Integer.parseInt(dump[1]));
                     }
-                    else if(list.get(a).contains("color:")){
+                    else if(list.get(a).contains("color:")&&!list.get(a).contains("bordercolor:")){
                         String[]dump = list.get(a).split(" ");
                         String[]dump2= dump[1].split(",");
                         temp.SetCR(Integer.parseInt(dump2[0]));

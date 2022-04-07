@@ -10,7 +10,7 @@ import javafx.scene.shape.Line;
 
 /**
  *
- * @author b7mac
+ * @author Benjamin MacLean
  */
 public class Lin extends Shape{
     int endx=100;

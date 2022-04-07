@@ -5,7 +5,6 @@
  */
 package finalproject;
 
-import Classes.Effects.*;
 import Classes.Shapes.*;
 import Classes.Misc.*;
 
@@ -17,7 +16,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author b7mac
+ * @author Benjamin MacLean
  */
 public class FinalProject extends Application {
     

@@ -6,7 +6,8 @@ Circle
 r: 10
 x: 200
 y: 200
-color: 255,0,0
+color: 255,0,255
+bordercolor: 255,255,0
 effect
 Show
 start: 10
@@ -20,6 +21,8 @@ width: 50
 x: 25
 y: 25
 border: 5
+color: 255,0,0
+bordercolor: 0,255,0
 effect
 Show
 start: 15
@@ -27,3 +30,12 @@ Jump
 start: 50
 x: 30
 y: 30
+
+Line
+x: 100
+y: 100
+border: 5
+endx: 150
+endy: 150
+color: 0,0,255
+

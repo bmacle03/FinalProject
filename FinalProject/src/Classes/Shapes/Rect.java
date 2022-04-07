@@ -10,7 +10,7 @@ import javafx.scene.shape.Rectangle;
 
 /**
  *
- * @author b7mac
+ * @author Benjamin MacLean
  */
 public class Rect extends Shape{
     public int length=20;

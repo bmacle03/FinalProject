@@ -10,7 +10,7 @@ import javafx.scene.shape.Circle;
 
 /**
  *
- * @author b7mac
+ * @author Benjamin MacLean
  */
 public class Circ extends Shape{
     public int r=20;

@@ -7,7 +7,7 @@ package Classes.Shapes;
 
 /**
  *
- * @author b7mac
+ * @author Benjamin MacLean
  */
 public class Shape {
     public int x=10; //starting coordinates for the shape. for circle: center point. for rectangle: top left corner. for line: starting point.
