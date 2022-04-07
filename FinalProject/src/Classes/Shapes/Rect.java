@@ -12,12 +12,12 @@ import javafx.scene.shape.Rectangle;
  *
  * @author Benjamin MacLean
  */
-public class Rect extends Shape{
-    public int length=20;
-    public int width=10;
-    public int br=0;
-    public int bg=0; //border rgb values
-    public int bb=0;
+public class Rect extends Shape{ //specific rectangle parameters all initialized to a value
+    public int length=20; //rectangle length
+    public int width=10; //rectnagle width
+    public int br=0; //border rgb red value
+    public int bg=0; //border rgb green value
+    public int bb=0; //border rgb blue value
     public Rect(){}
     public void SetLength(int length){
         this.length=length;
@@ -37,7 +37,7 @@ public class Rect extends Shape{
     public int GetLength(){
         return length;
     }
-    public Rectangle getRectangle(){
+    public Rectangle getRectangle(){ //creates a javafx recognized rectangle object with the values attributed to this object type, and returns it when called
         Rectangle temp = new Rectangle(x,y,length,width);//x, y, length, width
         temp.setFill(Color.rgb(cr,cg,cb)); //sets inside color
         temp.setStrokeWidth(border); //border width
